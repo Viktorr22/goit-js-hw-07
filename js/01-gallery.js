@@ -33,11 +33,15 @@ function getOriginalImage(event) {
     document.addEventListener('keydown', closeOriginalImage);
        function closeOriginalImage(event) {
           if (event.code === 'Escape') {
-             instance.close(event);
-          }
+            instance.close(event);
+            document.removeEventListener('keydown', closeOriginalImage);
+          }     
+         
+          
+}
+}
 
-}
-}
+
 
 
 
